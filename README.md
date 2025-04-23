@@ -4,7 +4,7 @@ Sustainable Urban Air Quality Analysis: A Comparative Study of Delhi, Chennai & 
 Project Overview
 This project presents a comprehensive analysis of air quality trends across three distinct regions in India—Delhi (urban, high AQI), Chennai (urban, moderate AQI), and Mandya (rural, low AQI)—from 2022 to March 2025. The goal is to uncover how seasonal changes, population dynamics, and pollutant sources impact overall air quality and to draw actionable insights that can guide sustainable urban planning.
 
-Objectives
+Objectives:
 Analyze and compare AQI trends across rural and urban regions.
 
 Study the seasonal variation of AQI and its correlation with PM10 and PM2.5 levels.
@@ -15,14 +15,14 @@ Develop insights that support sustainable air quality policies.
 
 Create a visually interactive and analytical dashboard using Power BI.
 
-Tools and Technologies
+Tools and Technologies:
 Microsoft Excel: Used for data collection, cleaning, preprocessing, and initial analysis.
 
 Power BI: For visualizing seasonal trends, pollutant contribution, population dynamics, and AQI category distribution.
 
 DAX: Used for KPI calculations and AQI category classification based on WHO standards.
 
-Key Insights
+Key Insights:
 Delhi has the highest average AQI (168.4), followed by Chennai (87.2), and Mandya (65.4).
 
 Despite having a higher population, Chennai maintains better air quality than Delhi—indicating other contributors like vehicular emissions and industrial activity.
