@@ -1,0 +1,24 @@
+Year = YEAR('Sheet1'[Date])
+##I used this DAX formula to extract the year from the Date column in my dataset. This helped me analyze air quality trends across 2022 to 2025 for each district. By breaking the data down by year, I was able to clearly compare how AQI, PM2.5, and PM10 levels changed over time and evaluate sustainability challenges in Mandya, Chennai, and Delhi more effectively.
+
+AQI Category = 
+SWITCH(
+    TRUE(),
+    'Sheet1'[AQI] <= 50, "Good",
+    'Sheet1'[AQI] <= 100, "Moderate",
+    'Sheet1'[AQI] <= 150, "Unhealthy for Sensitive Groups",
+    'Sheet1'[AQI] <= 200, "Unhealthy",
+    'Sheet1'[AQI] <= 300, "Very Unhealthy",
+    'Sheet1'[AQI] > 300, "Hazardous",
+    BLANK()
+)
+
+##I used this DAX to classify AQI values into categories as per WHO standards. This helped me easily break down and compare air quality levels across the districts and seasons in my dashboard.
+
+Category Count = 
+CALCULATE(
+    COUNT('Sheet1'[District]),
+    ALLEXCEPT('Sheet1', 'TableName'[AQI Category])
+)
+
+##I used this measure to count the number of distinct districts within each AQI Category, while ignoring all filters except for the AQI category itself. This helps in analyzing how districts are distributed across different air quality levels in the dashboard.
